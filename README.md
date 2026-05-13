@@ -1,82 +1,80 @@
-Lexi Avukat Asistanı iOS · Android
 Gizlilik Politikası
-Yürürlük tarihi: 13 Mayıs 2026 · Son güncelleme: 13 Mayıs 2026
+Son güncelleme: 13 Mayıs 2026
 
-Kısa özet
-Lexi tamamen sıfır-sunucu çalışır. Hiçbir müvekkil, dosya, tebligat veya belge verisi geliştiriciye veya üçüncü taraf bir sunucuya gönderilmez. Veriler yalnız
-cihazınızda
-ve isteğe bağlı olarak
-sizin kendi bulut hesabınızda
-(iCloud Drive / Google Drive) saklanır. Geliştirici hiçbir kişisel verinize erişemez.
-1. Veri Sorumlusu
-Uygulama: Lexi Avukat Asistanı
-Geliştirici iletişim: av.eminzorlu@gmail.com
+🔒 Veri Felsefemiz
+Verileriniz sizindir. Geliştirici verilerinize erişemez, toplamaz, depolamaz, satmaz veya analiz etmez. LEXİ tamamen cihaz odaklı bir uygulamadır; isteğe bağlı senkronizasyon yalnızca kendi iCloud hesabınız üzerinden çalışır.
 
-Lexi bireysel avukatların kendi müvekkil verilerini yönettiği bir araçtır. Avukat-kullanıcı, kendi müvekkillerine ait verilerin veri sorumlusu sıfatını taşır. Uygulama geliştiricisi, bu verilerin işleneceği bir sunucu işletmediği için veri işleyen sıfatını da taşımaz.
+1. Toplanan Veriler
+Avukat Asistanı LEXİ hiçbir kişisel veriyi geliştiriciye veya üçüncü taraflara aktarmaz. Tüm verileriniz:
 
-2. Toplanan ve İşlenen Veriler
-Lexi, aşağıdaki verileri yalnız cihazınızda, yerel SQLite veritabanında saklar:
+Cihazınızda yerel olarak saklanır (Apple SwiftData).
+İsteğe bağlı olarak kendi iCloud hesabınızda (Apple CloudKit) saklanır.
+LEXİ'nin geliştiricisi (Av. M. Emin Zorlu) verilerinize erişemez, göremez ve kontrol edemez. Veriler tamamen sizin yönetiminizdedir.
 
-Müvekkil bilgileri: ad-soyad, T.C. kimlik no, telefon, e-posta, adres
-Dosya bilgileri: mahkeme, esas/karar no, dava türü, tarihler
-Tebligat ve süre takibi kayıtları
-Duruşma, masraf, ücret, ödeme, karar arşivi kayıtları
-Eklenen evraklar (vekâletname, dilekçe vb.) — yalnız cihaz dosya sisteminde
-Uygulama tercihleri (tema, biyometrik kilit, bildirim saati)
-Hassas alanlar (T.C. kimlik, telefon, e-posta, adres, vekâletname içeriği vb.) cihazda AES-256-GCM ile şifrelenir; şifre çözme anahtarı yalnız cihazın güvenli hafızasında (iOS Keychain / Android Keystore) tutulur.
+2. Veri Türleri
+Uygulama içinde girdiğiniz veya içe aktardığınız veriler şunlar olabilir:
 
-3. Geliştiriciye Gönderilen Veriler
-Hiçbir veri gönderilmez. Uygulamada analitik, telemetri, çökme raporlama (crash reporting), reklam SDK'sı veya üçüncü taraf izleme aracı bulunmamaktadır.
+Avukatın ad-soyad bilgisi
+Müvekkillerin ad-soyad, ünvan, iletişim ve mali bilgileri
+Dosya bilgileri (mahkeme adı, esas no, tarafların sıfatı, tutukluluk/adli kontrol tedbirleri)
+Tebligat bilgileri (kurum, konu, içerik, süreler)
+Duruşma bilgileri ve duruşma notları
+Ödeme kayıtları ve ücret sözleşmeleri
+UYAP / UETS'ten dışa aktardığınız xlsx ve ics dosyalarının ayrıştırılmış içeriği
+Bu bilgiler yalnızca yerel veritabanı ve iCloud hesabınızda kalır.
 
-Tek istisna: Kullanıcı "Geri Bildirim" ekranından kendi e-posta uygulamasını açtığında, gönderdiği iletinin içeriği yalnız av.eminzorlu@gmail.com adresine ulaşır ve bu posta kutusu standart e-posta güvenliği ile işlenir.
+3. Sign in with Apple
+Karşılama ekranında Sign in with Apple kullanmayı tercih ederseniz Apple, bir kez ad-soyad bilginizi paylaşır. Bu bilgiler:
 
-4. Bulut Senkronizasyonu (İsteğe Bağlı)
-Açılış ekranında üç seçenek sunulur:
+Yalnızca avukat profili oluşturmak için cihazınızda saklanır.
+Geliştiriciye, sunucuya veya üçüncü taraflara gönderilmez.
+Apple ID kullanmadan adınızı el ile de girebilirsiniz; bu durumda Apple'a da bilgi gitmez.
 
-Google Drive ile devam et — Yedekler Drive hesabınızdaki LEXİ klasörüne yazılır. Kapsam drive.file ile sınırlıdır; Lexi yalnız kendi oluşturduğu dosyalara erişebilir, Drive'ınızın geri kalanını göremez.
-iCloud Drive ile devam et (iOS) — Yedekler iCloud Drive'daki LEXİ klasörüne yazılır.
-Bulutsuz devam et — Hiçbir bulut hesabıyla bağlantı kurulmaz, hiçbir veri cihaz dışına çıkmaz. Bu mod seçildiğinde uygulama yalnız yerel modda çalışır.
-Bulut seçildiğinde dahi veriler doğrudan sizin bulut hesabınıza gider; geliştiriciye veya Lexi'nin işlettiği bir sunucuya asla aktarılmaz.
+4. iCloud (CloudKit) Senkronizasyonu
+Eğer iCloud senkronizasyonunu açtıysanız:
 
-5. İzinler
-Kamera / Fotoğraflar — Yalnız belge çekmek/eklemek için, kullanıcı bizzat başlattığında.
-Bildirimler — Tebligat süresi, duruşma ve yedekleme hatırlatmaları için. Tüm bildirimler cihaz üzerinde yerel olarak planlanır; sunucu push servisi kullanılmaz.
-Biyometrik (Face ID / Touch ID / Parmak izi) — Yalnız uygulamayı açarken kilit doğrulaması için. Biyometrik veri uygulamaya ulaşmaz; doğrulama tamamen işletim sistemi tarafında yapılır.
-Dosyalar — Yedek dışa aktarma / geri yükleme sırasında, kullanıcının seçtiği dosyaya erişim için.
-6. Çocukların Verileri
-Lexi profesyonel avukatlık kullanımı için tasarlanmıştır ve 18 yaş altındaki bireylere yönelik değildir. 18 yaş altı kullanıcılardan bilinçli olarak veri toplanmaz.
+Verileriniz kendi iCloud hesabınızın "Private Database" alanında saklanır.
+Apple'ın gizlilik politikası geçerlidir (apple.com/legal/privacy).
+LEXİ geliştiricisi bu veritabanına erişemez.
+Sadece aynı Apple ID ile giriş yapan kendi cihazlarınız bu verilere erişebilir.
+iCloud senkronizasyonunu Daha → Hesap & Ayarlar ekranından her zaman kapatabilirsiniz.
 
-7. Veri Saklama Süresi
-Veriler kullanıcı silene kadar cihazda kalır. Uygulamanın silinmesi cihazdaki tüm verileri kaldırır. Bulut yedekleri yalnız kullanıcının kendi Drive / iCloud hesabında olduğundan, ilgili yedeklerin silinmesi veya saklanma süresi kullanıcının tasarrufundadır.
+5. Üçüncü Taraf Hizmetler ve Analitik
+LEXİ hiçbir üçüncü taraf hizmeti kullanmaz:
 
-8. Kullanıcı Hakları (KVKK m. 11 / GDPR Madde 15-22)
-Verileriniz yalnız sizin cihazınızda ve sizin bulutunuzda olduğundan, KVKK ve GDPR'da yer alan haklara doğrudan uygulama içinden ulaşabilirsiniz:
+❌ Analitik (Google Analytics, Firebase, vb.) YOK
+❌ Reklam ağı YOK
+❌ Çökme raporlama (Crashlytics, Sentry, vb.) YOK
+❌ Geliştirici sunucusu / API YOK
+❌ Tracking / parmak izi takibi YOK
+6. Bildirimler
+Tebligat son günleri ve duruşma saatleri için yerel (local) bildirim kullanılır. Bu bildirimler:
 
-Verilerinizi görüntüleme: Müvekkil / Dosya / Tebligat ekranları
-Düzeltme: "Düzenle" akışları
-Silme: Liste ekranlarındaki kaydırma silme ve "Arşiv" akışı
-Taşınabilirlik: "Daha → Dışa Aktarma" PDF / DOCX
-Yedek alma / geri yükleme: "Daha → Yedekleme"
-Uygulamanın işleyişine dair soru ve talepleriniz için: av.eminzorlu@gmail.com
+Tamamen cihazınızda üretilir.
+Apple'ın push sunucusunu yalnızca CloudKit senkronizasyon değişiklikleri için kullanır (kendi içeriğiniz, kendi iCloud hesabınız).
+Geliştirici veya üçüncü tarafa hiçbir bildirim verisi gitmez.
+7. Veri Paylaşımı (AirDrop / .lexi Bundle)
+Kullanıcı isteğiyle Daha → Paylaşım → Tüm Veriyi Paylaş seçeneği bir .lexi dosyası oluşturur. Bu dosya:
 
-9. Güvenlik
-Hassas alanlar cihaz üzerinde AES-256-GCM ile şifrelidir.
-Anahtar yalnız iOS Keychain / Android Keystore içinde tutulur.
-Uygulama arka plana alındığında ekran içeriği bulanıklaştırılır (App Switcher önizlemesinde müvekkil bilgisi görünmez).
-İsteğe bağlı biyometrik kilit (Face ID / Touch ID / parmak izi) açılışta doğrulama ister.
-Uygulama hiçbir TLS/HTTPS olmayan bağlantı kullanmaz; bulut sağlayıcılarına yalnız resmi SDK / OAuth uçları üzerinden bağlanır.
-10. Üçüncü Taraf Hizmetleri
-Lexi yalnız kullanıcının bizzat seçtiği bulut sağlayıcılarına bağlanır:
+Sadece sizin seçtiğiniz hedefe (AirDrop, Mail, Mesajlar) gönderilir.
+Geliştiriciye veya bir sunucuya gönderilmez.
+Avukatın profil bilgisi (ad-soyad, Apple ID) dosyaya eklenmez.
+8. Veri Saklama ve Silme
+Verileriniz siz silene kadar saklanır. Silme yöntemleri:
 
-Google Drive — Google Gizlilik Politikası
-iCloud Drive — Apple Gizlilik Politikası
-Bu sağlayıcıları kullanmadığınız sürece üçüncü tarafa hiçbir veri aktarımı yapılmaz.
+Tek tek: Her kayıt için listelerde sola kaydırarak veya seçim modunda toplu sil.
+Çıkış Yap: Yalnızca profil bilgilerini sıfırlar; iş verileri kalır.
+Hesabımı Sil: Daha → Hesap & Ayarlar → Tehlikeli Bölge. İki aşamalı doğrulama (yazılı onay + Face ID/Touch ID) ile TÜM verileriniz kalıcı olarak silinir; iCloud'da da temizlenir.
+Uygulamayı kaldırma: iOS/macOS'tan uygulamayı silmek yerel veriyi temizler; iCloud'daki kopya, Sistem Ayarları → Apple ID → iCloud → Uygulamaları Yönet bölümünden silinebilir.
+9. Çocuklar
+LEXİ avukatlar için tasarlanmış mesleki bir araçtır ve 17 yaş altı kullanıcılara yönelik değildir. Çocuklardan bilerek veri toplanmaz.
 
-11. Politika Değişiklikleri
-Bu politika güncellenirse, yeni sürüm aynı GitHub adresinde yayımlanır ve sayfanın üst kısmındaki "Son güncelleme" tarihi yenilenir. Köklü değişiklikler uygulama içinden ayrıca duyurulur.
+10. Değişiklikler
+Bu gizlilik politikasında değişiklik olursa uygulamanın yeni sürümünde güncel metin yer alır. Önemli değişiklikler için kullanıcıya açıkça bilgilendirme yapılır.
 
-12. İletişim
-Bu gizlilik politikası veya Lexi hakkında her türlü soru için:
-av.eminzorlu@gmail.com
+11. İletişim
+Sorularınız veya bildirimleriniz için:
 
-© 2026 Lexi Avukat Asistanı. Tüm hakları saklıdır.
+E-posta: av.eminzorlu@gmail.com
+Uygulama içi: Daha → Geri Bildirim
+© 2026 Avukat Asistanı LEXİ — Av. M. Emin Zorlu
